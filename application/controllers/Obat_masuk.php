@@ -39,7 +39,7 @@ class Obat_masuk extends CI_Controller
 		$judul['judul'] = 'Halaman Tambah Transaksi';
 		$data['kodemasuk'] = $this->m_id->buat_kode_masuk();
 		$kodemasuk = $this->m_id->buat_kode_masuk();
-		$data['obat'] = $this->db->query("SELECT * FROM obat ORDER BY nama_obat ASC")->result();
+		$data['obat'] = $this->db->get('stok_obat')->result_array();
 		$data['masuk'] = $this->db->query("SELECT * FROM detail_masuk JOIN obat ON detail_masuk.kd_obat =obat.id_obat WHERE kd_masuk ='$kodemasuk'")->result();
 		$data['subtotal'] = $this->Resep_model->hitung('detail_masuk', ['kd_masuk' => $this->m_id->buat_kode_masuk()]);
 		$data['petugas_obat'] = $this->db->get_where('petugas_obat', ['username' => $this->session->userdata('username')])->row_array();

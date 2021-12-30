@@ -12,9 +12,9 @@
           <div class="box">
             <div class="box-body">
               <div class="row">
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
                   <a href="<?= base_url();  ?>data_obat/tambah" class="btn btn-primary"> Tambah Obat Baru</a>
-                </div>
+                </div> -->
 
 
               </div>

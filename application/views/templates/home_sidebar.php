@@ -67,6 +67,14 @@
               </span>
             </a>
             <ul class="treeview-menu">
+              <!-- <li>
+                <a href="<?= base_url('pemeriksaan'); ?>">
+                  <i class=" fa fa-fw fa-stethoscope"></i><span>Pemeriksaan</span>
+                  <span class="pull-right-container">
+                  </span>
+                </a>
+              </li>
+              <li> -->
               <li><a href="<?= base_url('data_pasien'); ?>"><i class="fa fa-circle-o"></i>Data Pegawai</a></li>
               <li><a href="<?= base_url('obat_masuk'); ?>"><i class="fa fa-circle-o"></i> Obat Masuk</a></li>
               <!-- <li><a href="<?= base_url('diagnosa'); ?>"><i class="fa fa-circle-o"></i> Diagnosa</a></li> -->
