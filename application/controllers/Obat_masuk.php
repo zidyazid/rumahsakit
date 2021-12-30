@@ -194,7 +194,7 @@ class Obat_masuk extends CI_Controller
 
 		$data['ket'] = $ket;
 		$data['url_cetak'] = base_url($url_cetak);
-		$data['obat_masuk'] = $obat_masuk;
+		$data['obat_masuk'] = $this->db->get('masuk_obat')->result_array();
 		$data['kd_masuk'] = $this->Apoteker_model->kd_masuk();
 		$data['judul'] = 'Laporan Data Obat Masuk';
 		$data['admin'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
@@ -214,7 +214,7 @@ class Obat_masuk extends CI_Controller
 
 		ob_start();
 		require('assets/pdf/fpdf.php');
-		$data['obat_masuk'] = $this->Apoteker_model->view_all();
+		$data['obat_masuk'] = $this->db->get('masuk_obat')->result_array();
 		$data['ket'] = $ket;
 		$data['alamat'] = $alamat;
 		$this->load->view('obat_masuk/preview', $data);
@@ -238,7 +238,7 @@ class Obat_masuk extends CI_Controller
 
 	public function cetak2()
 	{
-
+		$data['user'] = $this->db->get_where('petugas_obat', ['username' => $this->session->userdata('username')])->row_array();
 		$kd_masuk = $_GET['kd_masuk'];
 		$ket = 'Kode Transaksi Obat Masuk   '   . $kd_masuk;
 		$alamat = 'Kp. Cibereum No.18 RT/RW 04/01 Tanjungjaya';

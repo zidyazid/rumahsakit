@@ -148,11 +148,9 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="<?= base_url('pemeriksaan/laporan'); ?>"><i class="fa fa-circle-o"></i> Laporan Pemeriksaan</a></li>
+              <!-- <li><a href="<?= base_url('pemeriksaan/laporan'); ?>"><i class="fa fa-circle-o"></i> Laporan Pemeriksaan</a></li> -->
               <li><a href="<?= base_url('data_pasien/laporan'); ?>"><i class="fa fa-circle-o"></i> Laporan Data Pasien</a></li>
               <li><a href="<?= base_url('data_obat/laporan'); ?>"><i class="fa fa-circle-o"></i> Laporan Data Obat</a></li>
-              <li><a href="<?= base_url('resep_obat/laporan'); ?>"><i class="fa fa-circle-o"></i> Laporan Data Resep</a></li>
-              <li><a href="<?= base_url('pembayaran/laporan'); ?>"><i class="fa fa-circle-o"></i> Laporan Data Pembayaran</a></li>
               <li><a href="<?= base_url('obat_masuk/laporan'); ?>"><i class="fa fa-circle-o"></i> Laporan Data Obat Masuk</a></li>
             </ul>
           </li><?php  } ?>

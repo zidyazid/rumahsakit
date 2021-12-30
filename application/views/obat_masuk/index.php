@@ -15,16 +15,11 @@
                 <div class="col-md-4">
                   <a href="<?= base_url();  ?>obat_masuk/tambah" class="btn btn-primary"> Tambah Obat Masuk</a>
                 </div>
-
-
               </div>
               <br>
               <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped ">
                   <thead>
-
-
-
                     <tr>
                       <th>No.</th>
                       <th>Kode Transaksi</th>

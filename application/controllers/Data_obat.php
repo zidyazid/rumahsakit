@@ -102,7 +102,7 @@ class Data_obat extends CI_Controller
 		$url_cetak = 'data_obat/cetak';
 		$data['ket'] = $ket;
 		$data['url_cetak'] = base_url($url_cetak);
-		$data['obat'] = $this->Obat_model->getAllObat()->result();
+		$data['obat'] = $this->db->get('stok_obat')->result_array();
 		$data['judul'] = 'Laporan Data Obat';
 		$data['admin'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
 
@@ -121,7 +121,7 @@ class Data_obat extends CI_Controller
 
 		ob_start();
 		require('assets/pdf/fpdf.php');
-		$data['obat'] = $this->Obat_model->getAllObat()->result();
+		$data['obat'] = $this->db->get('stok_obat')->result_array();
 		$data['ket'] = $ket;
 		$data['alamat'] = $alamat;
 		$this->load->view('data_obat/preview', $data);

@@ -15,13 +15,13 @@ class Auth extends CI_Controller
 		$this->form_validation->set_rules('username', 'Username', 'trim|required');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
 		if ($this->form_validation->run() == false) {
-			$data['title'] = 'Halaman Login Dokter';
+			$data['title'] = 'Halaman Login Admin';
 			$this->load->view('templates/auth_header', $data);
-			$this->load->view('auth/login');
+			$this->load->view('auth/login_admin');
 			$this->load->view('templates/auth_footer');
 		} else {
 			//validasi lolos
-			$this->_login();
+			$this->_loginadmin();
 		}
 	}
 

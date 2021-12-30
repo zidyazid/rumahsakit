@@ -118,7 +118,7 @@ class Data_pasien extends CI_Controller
 
 		$data['ket'] = $ket;
 		$data['url_cetak'] = base_url($url_cetak);
-		$data['pasien'] = $pasien;
+		$data['pasien'] = $this->db->get('diagnosa')->result_array();
 		$data['kd_rm'] = $this->Pasien_model->kd_rm();
 
 
@@ -141,7 +141,7 @@ class Data_pasien extends CI_Controller
 
 		ob_start();
 		require('assets/pdf/fpdf.php');
-		$data['pasien'] = $this->Pasien_model->view_all();
+		$data['pasien'] = $this->db->get('diagnosa')->result_array();
 		$data['ket'] = $ket;
 		$data['alamat'] = $alamat;
 		$this->load->view('data_pasien/preview', $data);
